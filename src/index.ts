@@ -6,7 +6,7 @@ import autoFix from "./autoFix";
 import { FlatfileRecord, bulkRecordHook } from "@flatfile/plugin-record-hook";
 import { validateEmail } from "@flatfile/plugin-validate-email";
 
-export function trustLayer(listener: FlatfileListener) {
+export default function (listener: FlatfileListener) {
 
   listener.use(configureSpace({
     workbooks: [
